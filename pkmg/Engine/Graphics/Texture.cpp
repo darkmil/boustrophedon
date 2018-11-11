@@ -24,8 +24,8 @@ Texture::Texture(string path)
 	cout << SOIL_CREATE_NEW_ID << endl;
 	cout << path.c_str() << endl;
 	cout << SOIL_FLAG_MULTIPLY_ALPHA << endl;
-	m_id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MULTIPLY_ALPHA);
-	if (GetTextureParams())
+	m_id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_INVERT_Y);
+	if (!GetTextureParams())
 	{
 		cout << "Erreur lors du chargement de l'image : " << path << endl;
 	}

@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	string a_path = "C:/Users/Milan/source/repos/pkmg/pkmg/";
+	string a_path = "";
 	cout << "Yo ma boy" << endl;
 	
 	Engine engine;
