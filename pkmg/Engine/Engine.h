@@ -8,24 +8,26 @@
 #include <iostream>
 using namespace std;
 
-class Engine
+namespace Engine
 {
-public:
-	static int m_screen_width;
-	static int m_screen_height;
-	Engine();
-	~Engine();
+	class Engine
+	{
+	public:
+		Engine();
+		~Engine();
 
-	bool Initialise(const char* window_title);
+		bool Initialize(const char* window_title);
 
-	void Update();
-	void BeginRender();
-	void EndRender();
+		void Update();
+		void BeginRender();
+		void EndRender();
 
 
-private:
-	static GLFWwindow* m_window;
+	private:
+		int m_screen_width;
+		int m_screen_height;
+		GLFWwindow* m_window;
 
-};
-
+	};
+}
 #endif

@@ -8,26 +8,32 @@
 #include <string>
 using namespace std;
 
-class Sprite
+namespace Engine
 {
-public:
-	Sprite();
-	Sprite(string imagePath);
-	Sprite(string imagePath, float xPos, float yPos);
+	namespace Graphics
+	{
+
+		class Sprite
+		{
+		public:
+			Sprite();
+			Sprite(string imagePath);
+			Sprite(string imagePath, float xPos, float yPos);
 
 
-	void Render();
-	void Update();
+			void Render();
+			void Update();
 
 
-private:
-	Texture m_texture;
-	float m_xPos;
-	float m_yPos;
+		private:
+			Texture m_texture;
+			float m_xPos;
+			float m_yPos;
 
 
-};
+		};
 
-
+	}
+}
 
 #endif

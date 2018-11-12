@@ -10,11 +10,11 @@ int main()
 	string a_path = "";
 	cout << "Yo ma boy" << endl;
 	
-	Engine engine;
+	Engine::Engine engine;
 
-	engine.Initialise("Pute");
+	engine.Initialize("Pute");
 
-	Sprite testSprite = Sprite(a_path + "Engine/Graphics/SOIL/img_cheryl.jpg", 100, 100);
+	Engine::Graphics::Sprite testSprite = Engine::Graphics::Sprite(a_path + "Engine/Graphics/SOIL/img_cheryl.jpg", 100, 100);
 
 	while (true)
 	{

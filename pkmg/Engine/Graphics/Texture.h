@@ -8,27 +8,32 @@
 #include <string>
 using namespace std;
 
-
-class Texture
+namespace Engine
 {
-public :
-	Texture();
-	Texture(int _id);
-	Texture(string path);
+	namespace Graphics
+	{
+		class Texture
+		{
+		public:
+			Texture();
+			Texture(int _id);
+			Texture(string path);
 
 
-	int GetHeight();
-	int GetWidth();
-	int GetId();
+			int GetHeight();
+			int GetWidth();
+			int GetId();
 
-private :
-	bool GetTextureParams();
+		private:
+			bool GetTextureParams();
 
-	int m_id;
-	int m_height;
-	int m_width;
+			int m_id;
+			int m_height;
+			int m_width;
 
-};
+		};
 
 #endif
 
+	}
+}
